@@ -17,8 +17,23 @@ def selcetion(list):
     # 리턴
     return list
 
+# 선택 정렬
 def insertion(list):
-    print("insertion")
+    # 1부터 리스트 크기까지 반복
+    for i in range(1, len(list)):
+        # key는 현재(i 인덱스에 있는) 리스트 값
+        key = list[i]
+        # j = key위치에 -1한 인덱스
+        j = i - 1
+        # j가 0보다 크고 key가 j인덱스에 있는 리스트 값보다 작으면 반복
+        while j>=0 and key < list[j]:
+            # 오른쪽으로 이동
+            list[j+1] = list[j]
+            j-=1
+        # 정렬된 위치에 key 삽입
+        list[j+1] = key
+    # 리턴
+    return list
 
 def bubble(list):
     print("bubble")
