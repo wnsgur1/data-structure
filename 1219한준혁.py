@@ -35,6 +35,7 @@ def insertion(list):
     # 리턴
     return list
 
+# 버블 정렬
 def bubble(list):
     print("bubble")
     
